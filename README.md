@@ -25,7 +25,7 @@ aumento(10, "30")
 ````
 Só vamos descobrir o erro quando o código rodar no navegador, já TypeScript adiciona suporte de tipo para JavaScript e captura erros de tipo durante a compilação. Se passarmos esse código para Typescript:
 
-
+![erro](https://github.com/bruleonel/gerenciador-de-negociacoes/assets/104650333/49eb8d67-3fbb-41db-affd-2067534e7683)
 
 A mensagem de erro vai aparecer logo na nossa frente dizendo que esperávamos dois inteiros e passamos um inteiro e uma string no parâmetro devido ao sistema de tipagem.
 
