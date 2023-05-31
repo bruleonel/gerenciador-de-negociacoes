@@ -79,8 +79,6 @@ Link.propTypes = {
 São duas linguagens de programação diferentes, porém uma é o superconjunto de outra. TypeScript é esse superconjunto, possibilitando que você use absolutamente tudo do JavaScript de forma válida. isto é, todo seu código JavaScript é válido em TypeScript (mas não o contrário). A principal diferença vai ser em relação a tipagem de dados, ao uso de classes, aos mecanismos de abstração, que são bem mais fortes.
 
 **Fonte:** <a href="https://pt-br.legacy.reactjs.org/docs/typechecking-with-proptypes.html">Artigo da Alura</a>
-
-<<<<<<< HEAD
 ## Pontos a considerar
 
 Usar tipagem obrigatória, assim o código não define como "any";
@@ -93,6 +91,4 @@ Ex:
     }
 ````
 *Mudar a conficaração do tsconfig.js*
-=======
-O carregamento de um módulo de “http://localhost:3000/js/models/negociacao” foi bloqueado devido a um tipo MIME não permitido (“text/html”).
->>>>>>> c8b409588f9e64e45e06c2236673f10f0a1e70c0
+
