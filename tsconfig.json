@@ -2,7 +2,8 @@
     "compilerOptions": {
         "outDir": "dist/js",
         "target": "ES6",
-        "noEmitOnError": true // não gera arquivo enquanto o js não estiver passando na compilação
+        "noEmitOnError": true, // não gera arquivo enquanto o js não estiver passando na compilação
+        "noImplicitAny": true //não cria tipo any automaticamente
     },
     "include": ["app/**/*"]
 }

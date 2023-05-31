@@ -80,4 +80,15 @@ São duas linguagens de programação diferentes, porém uma é o superconjunto 
 
 **Fonte:** <a href="https://pt-br.legacy.reactjs.org/docs/typechecking-with-proptypes.html">Artigo da Alura</a>
 
-O carregamento de um módulo de “http://localhost:3000/js/models/negociacao” foi bloqueado devido a um tipo MIME não permitido (“text/html”).
+## Pontos a considerar
+
+Usar tipagem obrigatória, assim o código não define como "any";
+Ex:
+````js
+    constructor(data: Date, quantidade: number, valor: number) {
+        this._data = data;
+        this._quantidade = quantidade;
+        this._valor = valor;
+    }
+````
+*Mudar a conficaração do tsconfig.js*
