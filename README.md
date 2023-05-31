@@ -25,7 +25,7 @@ aumento(10, "30")
 ````
 Só vamos descobrir o erro quando o código rodar no navegador, já TypeScript adiciona suporte de tipo para JavaScript e captura erros de tipo durante a compilação. Se passarmos esse código para Typescript:
 
-
+![erro](https://github.com/bruleonel/gerenciador-de-negociacoes/assets/104650333/49eb8d67-3fbb-41db-affd-2067534e7683)
 
 A mensagem de erro vai aparecer logo na nossa frente dizendo que esperávamos dois inteiros e passamos um inteiro e uma string no parâmetro devido ao sistema de tipagem.
 
@@ -80,6 +80,7 @@ São duas linguagens de programação diferentes, porém uma é o superconjunto 
 
 **Fonte:** <a href="https://pt-br.legacy.reactjs.org/docs/typechecking-with-proptypes.html">Artigo da Alura</a>
 
+<<<<<<< HEAD
 ## Pontos a considerar
 
 Usar tipagem obrigatória, assim o código não define como "any";
@@ -92,3 +93,6 @@ Ex:
     }
 ````
 *Mudar a conficaração do tsconfig.js*
+=======
+O carregamento de um módulo de “http://localhost:3000/js/models/negociacao” foi bloqueado devido a um tipo MIME não permitido (“text/html”).
+>>>>>>> c8b409588f9e64e45e06c2236673f10f0a1e70c0
