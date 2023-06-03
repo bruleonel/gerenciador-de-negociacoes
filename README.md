@@ -92,3 +92,85 @@ Ex:
 ````
 *Mudar a conficaração do tsconfig.js*
 
+## Benefícios da Tipagem Estática
+
+**Classe Sem Tipagem**
+
+````js
+export class NegociacaoController {
+    private inputData;
+    private inputQuantidade;
+    private inputValort;
+
+    constructor() {
+        this.inputData = document.querySelector('#data');
+        this.inputQuantidade = document.querySelector('#quantidade');
+        this.inputValor = document.querySelector('#valor');
+    }
+  ````
+Ao deixar as classes sem a tipagem o TS adota o tipo any, o problema desse tipo é que ele aceita qualque coisa que é mesmo comportmento do JS
+
+**Tipando a Classe**
+
+````js
+export class NegociacaoController {
+    private inputData: HTMLInputElement;
+    private inputQuantidade: HTMLInputElement;
+    private inputValor: HTMLInputElement;
+
+    constructor() {
+        this.inputData = document.querySelector('#data');
+        this.inputQuantidade = document.querySelector('#quantidade');
+        this.inputValor = document.querySelector('#valor');
+    }
+````
+A propriedade ````js "noImplicitAny":["true"]```` te obriga a tipar as classes tornando seu código mais seguro e preparado
+
+*OBS.: Quando a tipagem é feita direto na propriedade não é necessário a tipagem*
+
+ex:
+
+````js
+export class NegociacaoController {
+    private inputData = "30/01/2023";
+    }
+````
+A tipagem também deve ser feita em métodos!
+
+## Avançando na modelagem do domínio
+
+````js
+    lista(): ReadonlyArray<Negociacao> {
+        return this.negociacoes;
+        //return [...this.negociacoes]; foi implementado para que ao listar os elementos não fosse possível alterar o array, dessa forma ele lista uma nova lista. Só que o problema foi resolvido com o Readonly
+    }
+`````
+
+## Simplificando o código
+
+Repare que, geralmente, nas liguagens tipadas, é feito os atributos são declarados da seguinte maneira:
+
+````js
+export class Negociacao {
+    private _data: Date;
+    private _quantidade: number;
+    private _valor: number;
+
+    constructor(data: Date, quantidade: number, valor: number) {
+        this._data = data;
+        this._quantidade = quantidade;
+        this._valor = valor;
+    }
+````
+
+Aqui, com type Script também podemos fazes dessa forma, mas no TS podemos simplificar fazendo isto:
+
+````js
+export class Negociacao {
+    constructor( 
+    private _data: Date,
+    private _quantidade: number,
+    private _valor: number) {}
+}
+````
+# QUE LINDOOOOO!!! AMEI 😍
