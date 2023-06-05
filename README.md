@@ -174,3 +174,28 @@ export class Negociacao {
 }
 ````
 # QUE LINDOOOOO!!! AMEI 😍
+
+Foi criado as Views, sendo uma classe pai e as outras filhas que herdam os códigos parecidos, além disso View recebe um tipo "Generics" para que os métodos possam receber vários tipos de dados:
+
+````js
+export abstract class View<T> {
+    protected elemento: HTMLElement;
+
+    constructor(seletor: string) {
+        this.elemento = document.querySelector(seletor);
+    }
+
+    abstract template(model: T): string;
+
+    update(model: T): void {
+        const template = this.template(model);
+        this.elemento.innerHTML = template;
+    }
+}
+`````
+
+Olhando a classe, percebe-se que não faz sentido ela ser instânciada porque tem métodos que serãom mplementados de forma diferente, por isso ela é uma classe abstrata (abstract).
+
+- Dentro do códigó é importante deixar explicito o nível de poteção do código;
+- Foi criado uma valiação para que não sejam aceitas negociações no fim de semana utilizando o enum para que, caso precise, seja utilizado em outros lugares do código;
+- Estipule valor ao enum para que não seja atribuído valor automático.
