@@ -199,3 +199,17 @@ Olhando a classe, percebe-se que não faz sentido ela ser instânciada porque te
 - Dentro do códigó é importante deixar explicito o nível de poteção do código;
 - Foi criado uma valiação para que não sejam aceitas negociações no fim de semana utilizando o enum para que, caso precise, seja utilizado em outros lugares do código;
 - Estipule valor ao enum para que não seja atribuído valor automático.
+- A criação, a transformação do input do usuário, dos dados da UI em uma negociação, a lógica de conversão estava dentro do meu controller.
+
+Mas aprendemos que poderia ser interessante mover essa lógica que recebe uma data em string, uma quantidade em string e um valor em string para a própria classe negociação, porque poderia ser não um input
+
+Mas a nossa primeira tentativa não deu certo, porque, ao adicionar no nosso modelo de negociação, o método criaDe, cria de string, string e string, eu precisava criar uma instância de negociação para poder utilizar esse método.
+
+Se eu quero criar uma negociação, como eu vou primeiro criar uma negociação para depois chamar o método para criar uma negociação? Então foi uma forçação de barra, e de vez em quando isso acontece. Não é raro acontecer.
+
+Mas vimos que o que seria interessante é que esse método, em vez de ser um método de instância, o que significa? Em vez de ser um método que eu chamo a partir de um objeto criado através de uma classe, esse item pode ser um método de classe.
+
+Então foi por isso que, voltando em negociação, nós criamos o método criaDe como public static criaDe. Esse método, quando é estático, esse modificador static, me permite chamar diretamente, na classe, o método. Isso é muito importante.
+
+Uma coisa que isolamos dentro deste método foi a criação dos dados da negociação diretamente para uma negociação, e nós fizemos isso, um método estático, retornando uma negociação passando os valores convertidos.
+

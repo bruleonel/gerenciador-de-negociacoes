@@ -1,5 +1,4 @@
-//Cria a tabela para retornar as informações gravadas na tela
-import { View } from "./view.js";
+import { View } from './view.js';
 export class NegociacoesView extends View {
     template(model) {
         return `
@@ -14,18 +13,24 @@ export class NegociacoesView extends View {
             <tbody>
                 ${model.lista().map(negociacao => {
             return `
-                    <tr>
-                        <th>${this.formatarData(negociacao.data)}</th>
-                        <th>${negociacao.quantidade}</th>
-                        <th>${negociacao.valor}</th>
-                    </tr>
+                        <tr>
+                            <td>${this.formatar(negociacao.data)}
+                            </td>
+                            <td>
+                                ${negociacao.quantidade}
+                            </td>
+                            <td>
+                                ${negociacao.valor}
+                            </td>
+                        </tr>
                     `;
         }).join('')}
             </tbody>
         </table>
         `;
     }
-    formatarData(data) {
-        return new Intl.DateTimeFormat().format(data);
+    formatar(data) {
+        return new Intl.DateTimeFormat()
+            .format(data);
     }
 }
