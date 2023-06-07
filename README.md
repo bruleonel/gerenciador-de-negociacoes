@@ -1,5 +1,7 @@
 # Anotações Importantes
 
+**Obs.: Esse projeto foi desenvolvido nas semanas 19/20 do programa desenvolve**
+
 Comandos:
 - npm install *para instalar as dependências*
 - npm run start *para rodar o projeto no navegador*
@@ -227,3 +229,5 @@ No tsconfig.json
    "sourceMap": true
 ````
 No Chrome F12>console>cntrl + p
+
+![ezgif com-video-to-gif](https://github.com/bruleonel/gerenciador-de-negociacoes/assets/104650333/3952e9b1-7608-489b-927a-c8adcb8327bf)
