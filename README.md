@@ -213,3 +213,17 @@ Então foi por isso que, voltando em negociação, nós criamos o método criaDe
 
 Uma coisa que isolamos dentro deste método foi a criação dos dados da negociação diretamente para uma negociação, e nós fizemos isso, um método estático, retornando uma negociação passando os valores convertidos.
 
+
+## O que é Decorator em TS
+
+O Decorator é um padrão estrutural que permite adicionar novos comportamentos aos objetos dinamicamente, colocando-os dentro de objetos wrapper especiais. Usando decoradores, você pode agrupar objetos inúmeras vezes, pois os objetos de destino e os decoradores seguem a mesma interface.
+
+<a href="https://sbcode.net/typescript/decorator/">Documentação</a>
+
+## Debugando 
+No tsconfig.json
+
+````js
+   "sourceMap": true
+````
+No Chrome F12>console>cntrl + p
